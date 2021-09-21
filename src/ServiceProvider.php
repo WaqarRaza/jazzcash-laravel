@@ -1,9 +1,8 @@
 <?php
 
 namespace Waqarraza\Jazzcashlaravel;
-use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class ServiceProvider extends Illuminate\Support\ServiceProvider
 {
 
   public function boot() {
