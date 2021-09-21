@@ -10,7 +10,7 @@ return [
 
     'password' => '',
 
-    'integerity_salt' => '',
+    'integrity_salt' => '',
     
     'return_url' => '',
 
