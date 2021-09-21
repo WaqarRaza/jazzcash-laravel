@@ -1,0 +1,31 @@
+{
+  "name": "waqarraza/jazzcash-laravel",
+  "description": "Jazz Cash implementation with Laravel",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Waqarraza\\Jazzcashlaravel\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "muhammad waqar",
+      "email": "waqarqadri6@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0|^8.0",
+    "illuminate/support": "5.8.*|^6.0|^7.0|^8.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Waqarraza\\Jazzcashlaravel\\ServiceProvider"
+      ],
+      "aliases": {
+        "JazzCash": "Waqarraza\\Jazzcashlaravel\\Facade\\JazzCash"
+      }
+    }
+  }
+}
