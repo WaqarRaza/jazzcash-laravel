@@ -1,7 +1,7 @@
 <?php
 
 namespace Waqarraza\Jazzcashlaravel;
-use Illuminate\Support\ServiceProvider as Provider;
+use \Illuminate\Support\ServiceProvider as Provider;
 class ServiceProvider extends Provider
 {
 
