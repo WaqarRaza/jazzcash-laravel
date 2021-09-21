@@ -65,7 +65,7 @@ class JazzCash
         $str = $str . '&' . $value;
       }
     }
-    $salt = config('jazzcash.integerity_salt');
+    $salt = config('jazzcash.integrity_salt');
     $str = $salt . $str;
 
     return hash_hmac('sha256', $str, $salt);
