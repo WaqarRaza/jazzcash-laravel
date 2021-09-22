@@ -12,12 +12,12 @@ class Jazzcash
     return self::$instance;
   }
 
-  public function checkout($amount, $description = 'Sample Description') {
-    $data =  $this->makeRequest($amount, $description);
+  public function checkout($amount, $description = 'Sample Description', ...$params) {
+    $data =  $this->makeRequest($amount, $description, $params);
     return view('Waqarraza::checkout')->with('post_data',$data);
   }
 
-  private function makeRequest($amount, $description) {
+  private function makeRequest($amount, $description, $params = []) {
     $pp_Amount = (int)round($amount, 0);
     $pp_Amount *= 100;
     $pp_TxnDateTime = (new \DateTime);
@@ -43,11 +43,11 @@ class Jazzcash
         "pp_TxnExpiryDateTime" => $pp_TxnExpiryDateTime,
         "pp_ReturnURL" => config('jazzcash.return_url'),
         "pp_SecureHash" => "",
-        "ppmpf_1" => "1",
-        "ppmpf_2" => "2",
-        "ppmpf_3" => "3",
-        "ppmpf_4" => "4",
-        "ppmpf_5" => "5",
+        "ppmpf_1" => $params[0]??'',
+        "ppmpf_2" => $params[1]??'',
+        "ppmpf_3" => $params[2]??'',
+        "ppmpf_4" => $params[3]??'',
+        "ppmpf_5" => $params[4]??'',
     ];
     $data['pp_SecureHash'] = $this->get_hash($data);
 
