@@ -21,7 +21,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "JazzCashServiceProvider"
+        "Waqarraza\\\\Jazzcashlaravel\\JazzCashServiceProvider"
       ],
       "aliases": {
         "JazzCash": "Waqarraza\\Jazzcashlaravel\\JazzCashFacade"
