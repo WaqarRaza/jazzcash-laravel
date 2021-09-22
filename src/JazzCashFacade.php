@@ -1,6 +1,4 @@
-<?php
-
-namespace Waqarraza\Jazzcashlaravel;
+<?php namespace Waqar\Jazzcash;
 
 use Illuminate\Support\Facades\Facade;
 

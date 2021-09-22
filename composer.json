@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Waqarraza\\Jazzcashlaravel\\": "src/"
+      "Waqar\\Jazzcash\\": "src/"
     }
   },
   "authors": [
@@ -21,10 +21,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Waqarraza\\\\Jazzcashlaravel\\JazzCashServiceProvider"
+        "Waqar\\Jazzcash\\JazzCashServiceProvider"
       ],
       "aliases": {
-        "JazzCash": "Waqarraza\\Jazzcashlaravel\\JazzCashFacade"
+        "JazzCash": "Waqar\\Jazzcash\\JazzCashFacade"
       }
     }
   }

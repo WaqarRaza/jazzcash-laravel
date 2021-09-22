@@ -1,4 +1,4 @@
-<?php namespace Waqarraza\Jazzcashlaravel;
+<?php namespace Waqar\Jazzcash;
 
 class JazzCashServiceProvider extends \Illuminate\Support\ServiceProvider
 {
