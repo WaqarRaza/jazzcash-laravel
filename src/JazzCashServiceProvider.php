@@ -11,6 +11,9 @@ class JazzCashServiceProvider extends \Illuminate\Support\ServiceProvider
   }
 
   public function register() {
+    $this->mergeConfigFrom(
+        __DIR__.'/config/jazzcash.php','jazzcash'
+    );
     if ($this->app instanceof \Illuminate\Foundation\Application) {
       $this->app->singleton('JazzCash', function () {
         return Jazzcash::getInstance();
