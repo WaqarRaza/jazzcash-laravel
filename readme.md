@@ -8,18 +8,22 @@ composer require waqarraza/jazzcash-laravel
 
 ## Step 2
 
+For Laravel version <= 5.4
+
+You can skip this step for Laravel version >= 5.5
+
 Add these following lines in config/app.php
 
 ```php
 'providers' => [
     ...
-    Waqarraza\Jazzcashlaravel\JazzCashServiceProvider::class,
+    Waqar\Jazzcash\JazzCashServiceProvider::class,
     ...
 ]
 
 'aliases' => [
     ...
-    'JazzCash' => Waqarraza\Jazzcashlaravel\JazzCashFacade::class
+    'JazzCash' => Waqar\Jazzcash\JazzCashFacade::class
     ...
 ]
 ```
@@ -29,7 +33,7 @@ Add these following lines in config/app.php
 publish config and add details
 
 ```bash
-php artisan vendor:publish --provider="Waqarraza\Jazzcashlaravel\JazzCashServiceProvider"
+php artisan vendor:publish --provider="Waqar\Jazzcash\JazzCashServiceProvider"
 ```
 
 # Usage
