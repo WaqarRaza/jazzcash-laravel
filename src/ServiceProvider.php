@@ -15,7 +15,7 @@ class ServiceProvider extends Provider
   public function register() {
     if ($this->app instanceof \Illuminate\Foundation\Application) {
       $this->app->singleton('JazzCash', function () {
-        return JazzCash::getInstance();
+        return Payment::getInstance();
       });
     }
   }

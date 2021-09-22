@@ -2,7 +2,7 @@
 
 namespace Waqarraza\Jazzcashlaravel;
 
-class JazzCash
+class Payment
 {
   private static $instance;
 
