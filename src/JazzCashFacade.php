@@ -1,10 +1,10 @@
 <?php
 
-namespace Waqarraza\Jazzcashlaravel\Facades;
+namespace Waqarraza\Jazzcashlaravel;
 
 use Illuminate\Support\Facades\Facade;
 
-class JazzCash extends Facade
+class JazzCashFacade extends Facade
 {
 
   protected static function getFacadeAccessor() {

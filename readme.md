@@ -13,13 +13,13 @@ Add these following lines in config/app.php
 ```php
 'providers' => [
     ...
-    Waqarraza\Jazzcashlaravel\ServiceProvider::class,
+    Waqarraza\Jazzcashlaravel\JazzCashServiceProvider::class,
     ...
 ]
 
 'aliases' => [
     ...
-    'JazzCash' => Waqarraza\Jazzcashlaravel\Facades\JazzCash::class
+    'JazzCash' => Waqarraza\Jazzcashlaravel\JazzCashFacade::class
     ...
 ]
 ```
@@ -29,7 +29,7 @@ Add these following lines in config/app.php
 publish config and add details
 
 ```bash
-php artisan vendor:publish --provider="Waqarraza\Jazzcashlaravel\ServiceProvider"
+php artisan vendor:publish --provider="Waqarraza\Jazzcashlaravel\JazzCashServiceProvider"
 ```
 
 # Usage
@@ -39,7 +39,7 @@ Add merchant details in config/jazzcash.php file
 ```php
 'merchant_id' => '<your merchant id>',
 'password' => '<your password>',
-'integerity_salt' => '<your integerity salt>',
+'integrity_salt' => '<your integrity salt>',
 ```
 
 Set return page in config
@@ -48,12 +48,12 @@ Set return page in config
 'return_url' => 'http://127.0.0.1/returnpage',
 ```
 
-To checkout add function in controller
+To check out add function in controller
 
 ```php
 public function checkout() {
     $amount = 10 ; // in pkr
-    $description = "Some cehckout details";
+    $description = "Some checkout details";
     return JazzCash::checkout($amount, $description)
 }
 
@@ -73,4 +73,4 @@ checkout_return function will be called on `return_url`
 
 # Sandbox
 
-For testing you can use this number `03123456789`
+For testing, you can use this number `03123456789`

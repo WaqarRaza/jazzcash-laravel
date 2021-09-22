@@ -1,8 +1,6 @@
-<?php
+<?php namespace Waqarraza\Jazzcashlaravel;
 
-namespace Waqarraza\Jazzcashlaravel;
-use \Illuminate\Support\ServiceProvider as Provider;
-class ServiceProvider extends Provider
+class JazzCashServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
   public function boot() {
@@ -15,7 +13,7 @@ class ServiceProvider extends Provider
   public function register() {
     if ($this->app instanceof \Illuminate\Foundation\Application) {
       $this->app->singleton('JazzCash', function () {
-        return Payment::getInstance();
+        return Jazzcash::getInstance();
       });
     }
   }
